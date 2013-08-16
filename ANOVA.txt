@@ -1,0 +1,312 @@
+setwd("D:/Documentos/Mestrado FMRP-USP/Banco de Dados/BD1")
+dado<- read.csv("BD1.csv",sep=";",dec=",")
+attach(dado)
+
+##################### Análise de variância ###################################
+
+LOG1 <- log(dado$Catolé.do.Rocha)
+dado1.av <- aov(LOG1 ~ dado$Sexo, data = dado)
+dado1.av
+summary(dado1.av)
+anova(dado1.av)
+
+bmp(file=paste("Catolé do Rocha-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado1.av)
+graphics.off()
+
+###############################################
+
+LOG2 <- log(dado$Cajazeiras)
+dado2.av <- aov(LOG2 ~ dado$Sexo, data = dado)
+dado2.av
+summary(dado2.av)
+anova(dado2.av)
+
+bmp(file=paste("Cajazeiras-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado2.av)
+graphics.off()
+
+###############################################
+
+LOG3 <- log(dado$Sousa)
+dado3.av <- aov(LOG3 ~ dado$Sexo, data = dado)
+dado3.av
+summary(dado3.av)
+anova(dado3.av)
+
+bmp(file=paste("Sousa-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado3.av)
+graphics.off()
+
+###############################################
+
+LOG4 <- log(dado$Patos)
+dado4.av <- aov(LOG4 ~ dado$Sexo, data = dado)
+dado4.av
+summary(dado4.av)
+anova(dado4.av)
+
+bmp(file=paste("Patos-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado4.av)
+graphics.off()
+
+###############################################
+
+LOG5 <- log(dado$Piancó)
+dado5.av <- aov(LOG5 ~ dado$Sexo, data = dado)
+dado5.av
+summary(dado5.av)
+anova(dado5.av)
+
+bmp(file=paste("Piancó-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado5.av)
+graphics.off()
+
+###############################################
+
+LOG6 <- log(dado$Itaporanga)
+dado6.av <- aov(LOG6 ~ dado$Sexo, data = dado)
+dado6.av
+summary(dado6.av)
+anova(dado6.av)
+
+bmp(file=paste("Itaporanga-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado6.av)
+graphics.off()
+
+###############################################
+
+LOG7 <- log(dado$Serra.Teixeira)
+dado7.av <- aov(LOG7 ~ dado$Sexo, data = dado)
+dado7.av
+summary(dado7.av)
+anova(dado7.av)
+
+bmp(file=paste("Serra Teixeira-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado7.av)
+graphics.off()
+
+############################################### 
+
+dado$Seridó.Ocidental.Paraibano[which(dado$Seridó.Ocidental.Paraibano == 0)] <- NA
+LOG8 <- log(dado$Seridó.Ocidental.Paraibano)
+
+dado8.av <- aov(LOG8 ~ dado$Sexo, data = dado)
+dado8.av
+summary(dado8.av)
+anova(dado8.av)
+
+bmp(file=paste("Seridó Ocidental Paraibano-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado8.av)
+graphics.off()
+
+###############################################
+
+LOG9 <- log(dado$Seridó.Oriental.Paraibano)
+dado9.av <- aov(LOG9 ~ dado$Sexo, data = dado)
+dado9.av
+summary(dado9.av)
+anova(dado9.av)
+
+bmp(file=paste("Seridó Oriental Paraibano-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado9.av)
+graphics.off()
+
+###############################################
+
+LOG10 <- log(dado$Cariri.Ocidental)
+dado10.av <- aov(LOG10 ~ dado$Sexo, data = dado)
+dado10.av
+summary(dado10.av)
+anova(dado10.av)
+
+bmp(file=paste("Cariri Ocidental-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado10.av)
+graphics.off()
+
+###############################################
+
+dado$Cariri.Oriental[which(dado$Cariri.Oriental == 0)] <- NA
+LOG11 <- log(dado$Cariri.Oriental)
+
+dado11.av <- aov(LOG11 ~ dado$Sexo, data = dado)
+dado11.av
+summary(dado11.av)
+anova(dado11.av)
+
+bmp(file=paste("Cariri Oriental-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado11.av)
+graphics.off()
+
+###############################################
+
+LOG12 <- log(dado$Curimataú.Ocidental)
+dado12.av <- aov(LOG12 ~ dado$Sexo, data = dado)
+dado12.av
+summary(dado12.av)
+anova(dado12.av)
+
+bmp(file=paste("Curimataú Ocidental-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado12.av)
+graphics.off()
+
+###############################################
+
+LOG13 <- log(dado$Curimataú.Oriental)
+dado13.av <- aov(LOG13 ~ dado$Sexo, data = dado)
+dado13.av
+summary(dado13.av)
+anova(dado13.av)
+
+bmp(file=paste("Curimataú Oriental-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado13.av)
+graphics.off()
+
+###############################################
+
+LOG14 <- log(dado$Esperança)
+dado14.av <- aov(LOG14 ~ dado$Sexo, data = dado)
+dado14.av
+summary(dado14.av)
+anova(dado14.av)
+
+bmp(file=paste("Esperança-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado14.av)
+graphics.off()
+
+###############################################
+
+LOG15 <- log(dado$Brejo.Paraibano)
+dado15.av <- aov(LOG15 ~ dado$Sexo, data = dado)
+dado15.av
+summary(dado15.av)
+anova(dado15.av)
+
+bmp(file=paste("Brejo Paraibano-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado15.av)
+graphics.off()
+
+###############################################
+
+LOG16 <- log(dado$Guarabira)
+dado16.av <- aov(LOG16 ~ dado$Sexo, data = dado)
+dado16.av
+summary(dado16.av)
+anova(dado16.av)
+
+bmp(file=paste("Guarabira-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado16.av)
+graphics.off()
+
+###############################################
+
+LOG17 <- log(dado$Campina.Grande)
+dado17.av <- aov(LOG17 ~ dado$Sexo, data = dado)
+dado17.av
+summary(dado17.av)
+anova(dado17.av)
+
+bmp(file=paste("Campina Grande-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado17.av)
+graphics.off()
+
+###############################################
+
+LOG18 <- log(dado$Itabaiana)
+dado18.av <- aov(LOG18 ~ dado$Sexo, data = dado)
+dado18.av
+summary(dado18.av)
+anova(dado18.av)
+
+bmp(file=paste("Itabaiana-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado18.av)
+graphics.off()
+
+###############################################
+
+LOG19 <- log(dado$Umbuzeiro)
+dado19.av <- aov(LOG19 ~ dado$Sexo, data = dado)
+dado19.av
+summary(dado19.av)
+anova(dado19.av)
+
+bmp(file=paste("Umbuzeiro-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado19.av)
+graphics.off()
+
+###############################################
+
+LOG20 <- log(dado$Litoral.Norte.Paraibano)
+dado20.av <- aov(LOG20 ~ dado$Sexo, data = dado)
+dado20.av
+summary(dado20.av)
+anova(dado20.av)
+
+bmp(file=paste("Litoral Norte Paraibano-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado20.av)
+graphics.off()
+
+############################################### 
+
+dado$Sapé[which(dado$Sapé == 0)] <- NA
+LOG21 <- log(dado$Sapé)
+
+dado21.av <- aov(LOG21 ~ dado$Sexo, data = dado)
+dado21.av
+summary(dado21.av)
+anova(dado21.av)
+
+bmp(file=paste("Sapé-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado21.av)
+graphics.off()
+
+###############################################
+
+LOG22 <- log(dado$João.Pessoa)
+dado22.av <- aov(LOG22 ~ dado$Sexo, data = dado)
+dado22.av
+summary(dado22.av)
+anova(dado22.av)
+
+bmp(file=paste("João Pessoa-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado22.av)
+graphics.off()
+
+###############################################
+
+dado$Litoral.Sul.Paraibano[which(dado$Litoral.Sul.Paraibano == 0)] <- NA
+LOG23 <- log(dado$Litoral.Sul.Paraibano)
+
+dado23.av <- aov(LOG23 ~ dado$Sexo, data = dado)
+dado23.av
+summary(dado23.av)
+anova(dado23.av)
+
+bmp(file=paste("Litoral Sul Paraibano-.bmp",sep=""))
+par(mfrow=c(2,2))
+plot(dado23.av)
+graphics.off()
+
+
